@@ -5878,11 +5878,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LabStudent-55-504266\\Source\\Repos\\StarterIdentityProject2\\IdentityProject\\IdentityProject.csproj",
+      "projectUniqueName": "C:\\Users\\LabStudent-55-504266\\Source\\Repos\\StarterIdentityProject\\IdentityProject\\IdentityProject.csproj",
       "projectName": "IdentityProject",
-      "projectPath": "C:\\Users\\LabStudent-55-504266\\Source\\Repos\\StarterIdentityProject2\\IdentityProject\\IdentityProject.csproj",
+      "projectPath": "C:\\Users\\LabStudent-55-504266\\Source\\Repos\\StarterIdentityProject\\IdentityProject\\IdentityProject.csproj",
       "packagesPath": "C:\\Users\\LabStudent-55-504266\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LabStudent-55-504266\\Source\\Repos\\StarterIdentityProject2\\IdentityProject\\obj\\",
+      "outputPath": "C:\\Users\\LabStudent-55-504266\\Source\\Repos\\StarterIdentityProject\\IdentityProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
