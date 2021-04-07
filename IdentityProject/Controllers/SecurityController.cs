@@ -36,7 +36,34 @@ namespace IdentityProject.Controllers
         {
             return View();
         }
-        
+
+        public IActionResult SignIn()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult SignIn(SignIn obj)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = signinManager.PasswordSignInAsync
+                (obj.UserName, obj.Password,
+                    obj.RememberMe, false).Result;
+
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("Index", "CMS");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Invalid user details");
+                }
+            }
+            return View(obj);
+        }
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -73,6 +100,13 @@ namespace IdentityProject.Controllers
             }
             return View(obj);
         }
-
+        [HttpPost]
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        public IActionResult SignOut()
+        {
+            signinManager.SignOutAsync().Wait();
+            return RedirectToAction("SignIn", "Security");
+        }
     }
 }
